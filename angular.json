@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-tour"
+    }
+  },
+  "defaultProject": "angular-tour",
+  "cli": {
+    "analytics": false
+  }
 }
