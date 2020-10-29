@@ -4,21 +4,28 @@ import {FormsModule} from '@angular/forms';
 
 import {AppComponent} from './app.component';
 import {HeroesComponent} from './heroes/heroes.component';
-import { HeroDetailComponent } from './hero-detail/hero-detail.component';
-import { MessagesComponent } from './messages/messages.component';
+import {HeroDetailComponent} from './hero-detail/hero-detail.component';
+import {MessagesComponent} from './messages/messages.component';
+import {AppRoutingModule} from './app-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeroesComponent,
     HeroDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    // added due to the --module=app when creating the router
+    AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    // Not required due to @InjectedIn decorator
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
